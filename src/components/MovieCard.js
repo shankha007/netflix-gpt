@@ -6,7 +6,7 @@ const MovieCard = ({ posterPath }) => {
   if (!posterPath) return null;
 
   return (
-    <div className="w-48 px-2">
+    <div className="w-36 md:w-48 px-2">
       <img
         className="rounded-md"
         alt="Movie Card"
