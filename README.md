@@ -70,4 +70,4 @@ Before starting the project please add .env file and add TMDB and OPENAI KEY int
 
 # Deploy
 
-Link: https://netflixgpt-a1620.web.app/
+Link: https://netflixgpt-shankha.netlify.app/
