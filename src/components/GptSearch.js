@@ -7,7 +7,7 @@ import { BACKGROUND_IMAGE } from "../utils/constants";
 const GptSearch = () => {
   return (
     <div>
-      <div className="absolute -z-10 w-full">
+      <div className="fixed -z-10 w-full">
         <img src={BACKGROUND_IMAGE} alt="background-image" />
       </div>
       <GptSearchBar />

@@ -1,11 +1,13 @@
 import { useCallback, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { API_OPTIONS } from "../utils/constants";
 import { addTrendingMovies } from "../utils/moviesSlice";
 
 const useTrendingMovies = () => {
   const dispatch = useDispatch();
+
+  const trendingMovies = useSelector((store) => store.movies.trendingMovies);
 
   const getTrendingMovies = useCallback(async () => {
     const data = await fetch(
@@ -17,8 +19,8 @@ const useTrendingMovies = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    getTrendingMovies();
-  }, [getTrendingMovies]);
+    if (!trendingMovies) getTrendingMovies();
+  }, [getTrendingMovies, trendingMovies]);
 };
 
 export default useTrendingMovies;
